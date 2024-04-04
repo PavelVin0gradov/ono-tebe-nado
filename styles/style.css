@@ -1,4 +1,7 @@
 /* место для вашего кода */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: auto;
@@ -6,7 +9,6 @@ body {
 
 .content-section {
   max-width: 1100px;
-  min-height: 100px;
   margin: auto;
 }
 
@@ -16,18 +18,19 @@ body {
   justify-items: center;
   align-items: center;
   font-size: 18px;
-  padding: 74px 24px 89px;
+  padding: 92px 24px 89px;
 }
 
 .header__menu {
   display: flex;
-  margin: 44px 32px 40px 27px;
-  padding-right: 10px;
-  padding-top: 10px;
+  margin: 40px 32px 40px 24px;
+  line-height: 21px;
+  letter-spacing: 0.01em;
 }
 
 .header__links-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 32px;
   list-style: circle;
 }
@@ -46,12 +49,12 @@ body {
 
 .header__logo {
   display: block;
-  width: 135px;
-  height: 125px;
 }
 
 .header__logo-image {
-  padding-top: 14px;
+  width: 148px;
+  height: 105px;
+  object-fit: fill;
 }
 
 .address {
@@ -59,22 +62,12 @@ body {
   flex-direction: column;
   text-underline-offset: 4px;
   font-style: normal;
+  line-height: 24px;
 }
 
 .header__address {
   justify-self: end;
-  padding-right: 65px;
-}
-
-.address__header-link {
-  line-height: 16px;
-  letter-spacing: 0.5px;
-  padding-top: 10px;
-}
-
-.address__header-link:last-of-type {
-  padding-top: 10px;
-  padding-bottom: 8px;
+  padding-right: 60px;
 }
 
 .cover {
@@ -87,10 +80,9 @@ body {
 }
 
 .overlay {
-  width: 100%;
-  height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
+  inset: 0;
   z-index: 2;
 }
 
@@ -98,8 +90,9 @@ body {
   color: white;
   text-transform: uppercase;
   font-size: 100px;
-  margin: 165px 50px 125px 50px;
+  margin: 165px 50px 135px 50px;
   z-index: 3;
+  letter-spacing: 30px;
 }
 
 .aligned-text {
@@ -108,24 +101,31 @@ body {
 
 .aligned-text_center {
   text-align: center;
-  padding-top: 10px;
-  padding-right: 25px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  line-height: 100%;
 }
 
 .aligned-text_right {
   text-align: right;
+  line-height: 100%;
 }
 
 .letter-spacing-extended {
-  letter-spacing: 20px;
+  letter-spacing: 60px;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0px;
 }
 
 .cover__description {
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin: auto;
   z-index: 3;
-  padding-bottom: 50px;
+  padding-bottom: 51px;
 }
 
 .cover__description-text {
@@ -134,12 +134,12 @@ body {
   font-size: 22px;
   font-weight: normal;
   word-spacing: 18px;
-  text-align: center;
   padding-left: 30px;
-  padding-top: 12px;
+  line-height: 28px;
 }
 
 .bet-button {
+  font-family: inherit;
   width: 256px;
   height: 51px;
   white-space: nowrap;
@@ -151,15 +151,17 @@ body {
   border: 1px solid;
   padding: 7px 30px;
   margin-left: 80px;
+  line-height: 26px;
 }
 
 .lots {
-  padding: 179px 24px 126px 24px;
+  padding: 179px 24px 148px 24px;
 }
 
 .lots__heading {
   text-transform: uppercase;
   font-size: 40px;
+  line-height: 47px;
   font-weight: bold;
   padding-left: 40px;
   padding-bottom: 27px;
@@ -173,8 +175,8 @@ body {
 
 .lots__card-list-item {
   flex-grow: 1;
-  max-width: 334px;
-  min-height: 563px;
+  width: 334px;
+  max-height: 563px;
   list-style-type: none;
 }
 
@@ -191,13 +193,18 @@ body {
   font-size: 20px;
   line-height: 23px;
   text-underline-offset: 4px;
-  padding-top: 28px;
+  padding-top: 30px;
   padding-left: 40px;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 51px 40px 48px 40px;
   background-size: cover;
   position: relative;
+  background-position: center;
   height: 100%;
   z-index: 1;
 }
@@ -214,14 +221,6 @@ body {
   background-image: url(../images/card-lot-03.jpg);
 }
 
-.card__description {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 51px 40px 48px 40px;
-  height: 100%;
-}
-
 .card__title {
   position: relative;
   color: white;
@@ -231,6 +230,12 @@ body {
   line-height: 120%;
   text-decoration-line: underline;
   text-transform: uppercase;
+}
+
+.card__text-scale {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .card__text {
@@ -250,7 +255,7 @@ body {
 }
 
 .about__logo {
-  margin: 55px;
+  margin: 35px auto;
   align-self: start;
   justify-self: center;
   display: flex;
@@ -272,7 +277,7 @@ body {
   font-size: 40px;
   line-height: 47px;
   text-transform: uppercase;
-  padding-top: 158px;
+  padding-top: 136px;
   padding-bottom: 100px;
 }
 
@@ -281,10 +286,12 @@ body {
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.01em;
+  font-style: normal;
+  margin-top: 24px;
 }
 
 .about__text:first-of-type {
-  margin-bottom: 24px;
+  margin-top: 0px;
 }
 
 .footer {
@@ -294,26 +301,17 @@ body {
 }
 
 .footer__address {
-  letter-spacing: 1px;
-}
-
-.address__footer-link {
-  line-height: 16px;
-  letter-spacing: 1px;
-  padding-top: 5px;
-}
-
-.address__footer-link:last-of-type {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .footer__menu-list {
+  font-size: 18px;
+  font-weight: 400;
   list-style-type: none;
   text-align: center;
   line-height: 21px;
   text-underline-offset: 4px;
-  letter-spacing: 1px;
 }
 
 .footer__menu-link_active {
@@ -329,11 +327,11 @@ body {
 }
 
 .footer__social-list-item {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .footer__social-link {
-    display: block;
+  display: block;
   width: 48px;
   height: 48px;
 }
