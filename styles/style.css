@@ -18,12 +18,12 @@ body {
   justify-items: center;
   align-items: center;
   font-size: 18px;
-  padding: 92px 24px 89px;
+  padding: 92px 24px 96px;
 }
 
 .header__menu {
   display: flex;
-  margin: 40px 32px 40px 24px;
+  margin: 44px 32px 40px 24px;
   line-height: 21px;
   letter-spacing: 0.01em;
 }
@@ -48,12 +48,12 @@ body {
 }
 
 .header__logo {
-  display: block;
+  height: 105px;
 }
 
 .header__logo-image {
   width: 148px;
-  height: 105px;
+  height: 100%;
   object-fit: fill;
 }
 
@@ -67,6 +67,7 @@ body {
 
 .header__address {
   justify-self: end;
+  padding-top: 2px;
   padding-right: 60px;
 }
 
